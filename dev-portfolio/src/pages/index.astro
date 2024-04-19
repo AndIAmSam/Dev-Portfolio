@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import EmailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ExperienceWorkIcon from "../components/icons/ExperienceWork.astro";
+import Experience from "../components/Experience.astro";
+import ProjectIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Knowledge from "../components/Knowledge.astro";
+---
+
+<Layout
+  title="Portfolio de Sam - Desarrollador y programador web"
+  description="Siempre innovando."
+>
+  <main class="px-8">
+    <SectionContainer class="py-44 pb-28">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://www.nintenderos.com/wp-content/uploads/2022/05/Screen_Shot_2018-04-24_at_1.33.44_PM.jpg"
+        alt="photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Sam<a
+          href="https://google.com"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>10 años de experiencia.</span>
+        <span class="opacity-80 text-green-200/90"
+          >Desarrollador Web y Desarrolaldor Web.
+        </span>
+        <span class="opacity-70">Especializado en crear apps únicas. </span>
+
+        <nav class="flex gap-6 mt-8 flex-wrap">
+          <SocialPill href="https:www.google.com">
+            <LinkedInIcon class="size-4 md:size-6" />
+            Linkedin
+          </SocialPill>
+          <SocialPill href="https:www.google.com">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:samflogar@protonmail.com">
+            <EmailIcon class="size-4 md:size-6" />
+            E-Mail
+          </SocialPill>
+        </nav>
+      </h2>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ExperienceWorkIcon class="size-7" />
+        Experiencia
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProjectIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProjectIcon class="size-7" />
+        Conocimientos
+      </h2>
+      <Knowledge />
+    </SectionContainer>
+  </main>
+</Layout>
