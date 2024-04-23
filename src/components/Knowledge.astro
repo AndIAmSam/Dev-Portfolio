@@ -1,170 +1,84 @@
-<div class="grid grid-cols-3 md:grid-cols-7 gap-4">
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/JavaScript.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Typescript.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Astro.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/HTML.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/CSS.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Tailwind.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/React.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/ReactRouter.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Redux.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Expo.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/NodeJS.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Express.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/MySQL.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/MariaDB.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Unity.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/CS.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/AWS.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Docker.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Git.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Python.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Linux.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Figma.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Wordpress.svg"
-      alt=""
-    />
-  </div>
-  <div>
-    <img
-      class="h-auto max-w-full rounded-lg"
-      src="./../../public/knowledge/Elementor.svg"
-      alt=""
-    />
-  </div>
-</div>
+---
+import KnowledgeItem from "./KnowledgeItem.astro";
+
+const KNOWLEDGE = [
+  {
+    date: "Si",
+    title: "Desarrollo Móvil",
+    description: "Desarrollo aplicaciones móviles con React Native.",
+    icon: [
+      { src: "./../../public/knowledge/React.svg", label: "React Native" },
+      { src: "./../../public/knowledge/Expo.svg", label: "Expo" },
+      { src: "./../../public/knowledge/Redux.svg", label: "Redux" },
+      { src: "./../../public/knowledge/NodeJS.svg", label: "NodeJS" },
+      { src: "./../../public/knowledge/Tailwind.svg", label: "Tailwind" },
+      { src: "./../../public/knowledge/CSS.svg", label: "CSS" },  
+    ],
+  },
+  {
+    date: "Si",
+    title: "Desarrollo Web",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: [
+      { src: "./../../public/knowledge/React.svg", label: "React" },
+      { src: "./../../public/knowledge/NodeJS.svg", label: "NodeJS" },
+      { src: "./../../public/knowledge/Bun.svg", label: "Bun" },
+      { src: "./../../public/knowledge/JavaScript.svg", label: "JavaScript" },
+      { src: "./../../public/knowledge/Typescript.svg", label: "Typescript" },
+      { src: "./../../public/knowledge/Redux.svg", label: "Redux" },
+      { src: "./../../public/knowledge/Express.svg", label: "Express" },
+      { src: "./../../public/knowledge/HTML.svg", label: "HTML" },
+      { src: "./../../public/knowledge/CSS.svg", label: "CSS" },
+      { src: "./../../public/knowledge/Tailwind.svg", label: "Tailwind" },
+      { src: "./../../public/knowledge/Astro.svg", label: "Astro" },
+      { src: "./../../public/knowledge/Vite.svg", label: "Vite" },
+    ],
+  },
+  {
+    date: "Si",
+    title: "DevOps",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: [
+      { src: "./../../public/knowledge/Git.svg", label: "Git" },
+      { src: "./../../public/knowledge/Docker.svg", label: "Docker" },
+      { src: "./../../public/knowledge/AWS.svg", label: "AWS" },
+      { src: "./../../public/knowledge/Linux.svg", label: "Linux" },
+      { src: "./../../public/knowledge/Firebase.svg", label: "Firebase" },
+    ],
+  },
+  {
+    date: "Si",
+    title: "Desarrollo de Videojuegos",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: [
+      { src: "./../../public/knowledge/Unity.svg", label: "Unity" },
+      { src: "./../../public/knowledge/CS.svg", label: "CS" },
+    ],
+  },
+  {
+    date: "Si",
+    title: "Extra Tools",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: [
+      { src: "./../../public/knowledge/Figma.svg", label: "Figma" },
+      { src: "./../../public/knowledge/GitHub.svg", label: "GitHub" },
+      { src: "./../../public/knowledge/Python.svg", label: "Python" },
+      { src: "./../../public/knowledge/Electron.svg", label: "Electron" },
+    ],
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    KNOWLEDGE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <KnowledgeItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
