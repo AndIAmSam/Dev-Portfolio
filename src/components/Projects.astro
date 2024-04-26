@@ -1,33 +1,64 @@
 ---
 import AstroFr from "./icons/AstroFr.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Redux from "./icons/Redux.astro";
+import Expo from "./icons/Expo.astro";
+import CSS from "./icons/CSS.astro";
+
 const TAGS = {
   ASTRO: {
     name: "Astro",
-    class: "bg-black text-white",
+    class: "bg-white/20 text-white",
     icon: AstroFr,
   },
   TALWIND: {
     name: "Tailwind CSS",
-    class: "bg-black text-[#73bcf6]",
+    class: "bg-white/20 text-[#73bcf6]",
     icon: Tailwind,
+  },
+  REACT: {
+    name: "React Native",
+    class: "bg-white/20 text-[#73bcf6]",
+    icon: React,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-white/20 text-[#f0db4f]",
+    icon: JavaScript,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-white/20 text-[#764abc]",
+    icon: Redux,
+  },
+  EXPO: {
+    name: "Expo",
+    class: "bg-white/20 text-[#000020]",
+    icon: Expo,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-white/20 text-[#1572b6]",
+    icon: CSS,
   },
 };
 
 const PROJECTS = [
   {
-    title: "Project 1",
-    description: "This is a description of project 1",
+    title: "To Do App",
+    description: "Una app para manejar tus tareas diarias.",
     link: "#",
-    github: "#",
-    image: "/projects/TestImage.webp",
-    tags: [TAGS.ASTRO, TAGS.TALWIND],
+    github: "https://github.com/AndIAmSam/To-Do-App",
+    image: "/projects/ToDoApp.png",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.REDUX, TAGS.EXPO, TAGS.CSS],
   },
   {
     title: "Project 2",
     description: "This is a description of project 2",
-    link: "#",
-    github: "#",
+    link: "",
+    github: "",
     image: "/projects/TestImage.webp",
     tags: [TAGS.ASTRO, TAGS.TALWIND],
   },
@@ -35,14 +66,16 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
     <article>
-      <h3 class="text-3xl font-semibold text-green-200">{title}</h3>
+      <h3 class="text-3xl font-semibold text-green-200 mt-14">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-4 flex-row mb-4">
         {tags.map((tag) => (
           <li>
-            <span class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3`}>
+            <span
+              class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3`}
+            >
               <tag.icon class="size-5" />
               {tag.name}
             </span>
@@ -50,10 +83,24 @@ const PROJECTS = [
         ))}
       </ul>
       <img
-        class="rounded shadow-2xl shadow-white/10 mb-14"
+        class="rounded shadow-2xl shadow-white/10 mb-4"
         src={image}
         alt={`Capura de pantalla del proyecto`}
       />
+      {github ? (
+        <a
+          href={github}
+          class="inline-flex items-center gap-x-2 rounded-full px-4 text-white/70 bg-white/20 p-2 text-lg font-semibold hover:scale-110 transition"
+          target="_blank"
+        >
+          Ver proyecto en GitHub
+          <img
+            class="h-6 w-6"
+            src="../../src/brandIcons/GitHub.svg"
+            alt={`Capura de pantalla del proyecto`}
+          />
+        </a>
+      ) : null}
     </article>
   ))
 }

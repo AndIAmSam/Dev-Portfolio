@@ -11,12 +11,13 @@ import ExperienceWorkIcon from "../components/icons/ExperienceWork.astro";
 import Experience from "../components/Experience.astro";
 import ProjectIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
-import Knowledge3 from "../components/Knowledge3.astro";
 import Knowledge from "../components/Knowledge.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
-  title="Portfolio de Sam - Desarrollador y programador web"
+  title="Portafolio de Sam - Desarrollador y programador web"
   description="Siempre innovando."
 >
   <main class="px-8">
@@ -29,7 +30,7 @@ import Knowledge from "../components/Knowledge.astro";
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hey, soy Sam<a
+        Hola, soy Sam<a
           href="https://google.com"
           target="_blank"
           rel="noopener"
@@ -38,18 +39,19 @@ import Knowledge from "../components/Knowledge.astro";
         >
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span>10 años de experiencia.</span>
-        <span class="opacity-80 text-green-200/90"
-          >Desarrollador Web y Desarrolaldor Web.
-        </span>
-        <span class="opacity-70">Especializado en crear apps únicas. </span>
+        <span>Ingeniero en Computación. </span>
+        <span class="opacity-90 text-green-200">Desarrollador. </span>
+        <span class="opacity-70"
+          >Enfocado en el desarrollo de soluciones web, aplicaciones móviles y
+          videojuegos únicos.</span
+        >
 
         <nav class="flex gap-6 mt-8 flex-wrap">
-          <SocialPill href="https:www.google.com">
+          <SocialPill href="https://www.linkedin.com/in/samflogar">
             <LinkedInIcon class="size-4 md:size-6" />
             Linkedin
           </SocialPill>
-          <SocialPill href="https:www.google.com">
+          <SocialPill href="https://github.com/AndIAmSam">
             <GitHubIcon class="size-4 md:size-6" />
             GitHub
           </SocialPill>
@@ -72,7 +74,7 @@ import Knowledge from "../components/Knowledge.astro";
     <SectionContainer id="projects">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <ProjectIcon class="size-7" />
-        Proyectos
+        Proyectos Destacados
       </h2>
       <Projects />
     </SectionContainer>
@@ -83,6 +85,22 @@ import Knowledge from "../components/Knowledge.astro";
         Conocimientos
       </h2>
       <Knowledge />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProjectIcon class="size-7" />
+        Sobre mí
+      </h2>
+      <About />
+    </SectionContainer>
+
+    <SectionContainer id="contact">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProjectIcon class="size-7" />
+        Contacto
+      </h2>
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>
