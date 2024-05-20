@@ -1,9 +1,47 @@
-<header class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center fixed top-0 left-0 right-0 z-10 flex justify-center items-center py-5 xl:w-[1120px]">
-    <nav class="flex space-x-7 flex-row gap-x-10 opacity-90 bg-black/80 py-2 px-20 rounded-2xl font-semibold text-lg">
+<header class="w-full mx-auto max-w-screen-xl p-4 fixed top-0 left-0 right-0 z-10 flex justify-between items-center py-5 xl:w-[1120px]">
+    <nav class="hidden mx-auto space-x-7 flex-row gap-x-10 opacity-90 bg-black/80 py-2 px-20 rounded-2xl font-semibold text-lg md:flex md:justify-end md:items-center">
         <a href="#top" class="hover:text-green-200 hover:scale-125 transition">Inicio</a>
         <a href="#experience" class="hover:text-green-200 hover:scale-125 transition">Experiencia</a>
         <a href="#projects" class="hover:text-green-200 hover:scale-125 transition">Proyectos</a>
         <a href="#about" class="hover:text-green-200 hover:scale-125 transition">Sobre mí</a>
         <a href="#contact" class="hover:text-green-200 hover:scale-125 transition">Contacto</a>
     </nav>
+
+    <div class="md:hidden">
+        <button id="hamburger" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center">
+        <div class="flex flex-col items-center">
+            <a href="#top" class="text-white py-3">Inicio</a>
+            <a href="#experience" class="text-white py-3">Experiencia</a>
+            <a href="#projects" class="text-white py-3">Proyectos</a>
+            <a href="#about" class="text-white py-3">Sobre mí</a>
+            <a href="#contact" class="text-white py-3">Contacto</a>
+        </div>
+    </div>
 </header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburgerBtn = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+  
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+  
+        // Ocultar el menú móvil cuando se selecciona una opción
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+    });
+  </script>

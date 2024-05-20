@@ -6,6 +6,8 @@ import JavaScript from "./icons/JavaScript.astro";
 import Redux from "./icons/Redux.astro";
 import Expo from "./icons/Expo.astro";
 import CSS from "./icons/CSS.astro";
+import GitHub from "./icons/GitHub.astro";
+import Vite from "./icons/Vite.astro";
 
 const TAGS = {
   ASTRO: {
@@ -19,6 +21,11 @@ const TAGS = {
     icon: Tailwind,
   },
   REACT: {
+    name: "React",
+    class: "bg-white/20 text-[#73bcf6]",
+    icon: React,
+  },
+  REACTNATIVE: {
     name: "React Native",
     class: "bg-white/20 text-[#73bcf6]",
     icon: React,
@@ -43,64 +50,76 @@ const TAGS = {
     class: "bg-white/20 text-[#1572b6]",
     icon: CSS,
   },
+  GITHUB: {
+    name: "GitHub",
+    class: "bg-white/20 text-[#000]",
+    icon: GitHub,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-white/20 text-[#646c72]",
+    icon: Vite,
+  },
 };
 
 const PROJECTS = [
   {
     title: "To Do App",
-    description: "Una app para manejar tus tareas diarias.",
+    description: "Una app móvil para gestionar tus tareas diarias.",
     link: "#",
     github: "https://github.com/AndIAmSam/To-Do-App",
     image: "/projects/ToDoApp.png",
-    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.REDUX, TAGS.EXPO, TAGS.CSS],
+    tags: [TAGS.REACTNATIVE, TAGS.JAVASCRIPT, TAGS.REDUX, TAGS.EXPO, TAGS.CSS, TAGS.GITHUB],
   },
   {
-    title: "Project 2",
-    description: "This is a description of project 2",
+    title: "Tool Web App",
+    description: "Una web con mini-herramientas de distintos tipos.",
     link: "",
-    github: "",
-    image: "/projects/TestImage.webp",
-    tags: [TAGS.ASTRO, TAGS.TALWIND],
+    github: "https://github.com/AndIAmSam/Dev-Tools",
+    image: "/projects/DevTools.png",
+    tags: [TAGS.REACT, TAGS.VITE, TAGS.TALWIND, TAGS.JAVASCRIPT, TAGS.GITHUB],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, tags, image, link, github }) => (
-    <article>
-      <h3 class="text-3xl font-semibold text-green-200 mt-14">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row mb-4">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3`}
-            >
-              <tag.icon class="size-5" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10 mb-4"
-        src={image}
-        alt={`Capura de pantalla del proyecto`}
-      />
-      {github ? (
-        <a
-          href={github}
-          class="inline-flex items-center gap-x-2 rounded-full px-4 text-white/70 bg-white/20 p-2 text-lg font-semibold hover:scale-110 transition"
-          target="_blank"
-        >
-          Ver proyecto en GitHub
-          <img
-            class="h-6 w-6"
-            src="../../src/brandIcons/GitHub.svg"
-            alt={`Capura de pantalla del proyecto`}
-          />
-        </a>
-      ) : null}
-    </article>
-  ))
-}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {
+    PROJECTS.map(({ title, description, tags, image, link, github }) => (
+      <article>
+        <h3 class="text-3xl font-semibold text-green-200 mt-14 ">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-wrap mb-2">
+          {tags.map((tag, index) => (
+            <li>
+              <span
+                class={`flex items-center gap-x-2 mb-2 rounded-full text-xs ${tag.class} py-2 px-3`}
+              >
+                <tag.icon class="size-5" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded-xl shadow-2xl shadow-white/10 mb-4"
+          src={image}
+          alt={`Capura de pantalla del proyecto`}
+        />
+        {github ? (
+          <a
+            href={github}
+            class="inline-flex items-center gap-x-2 rounded-full px-4 text-white/70 bg-white/20 p-2 text-lg font-semibold hover:scale-110 transition"
+            target="_blank"
+          >
+            Ver proyecto en GitHub
+            <img
+              class="h-6 w-6"
+              src="../../src/brandIcons/GitHub.svg"
+              alt={`Capura de pantalla del proyecto`}
+            />
+          </a>
+        ) : null}
+      </article>
+    ))
+  }
+</div>
