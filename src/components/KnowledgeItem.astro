@@ -1,6 +1,6 @@
 ---
 interface IconProps {
-  src: string;
+  component: any;
   label: string;
 }
 
@@ -11,7 +11,8 @@ interface AstroProps {
   icon?: IconProps[];
 }
 
-const { title, description, link, date, icon } = Astro.props;
+
+const { title, description, link, icon } = Astro.props;
 ---
 
 <li class="mb-10 ms-6">
@@ -44,14 +45,57 @@ const { title, description, link, date, icon } = Astro.props;
     {description}
   </p>
   <div class="grid grid-cols-3 md:grid-cols-8 gap-4">
-    {
-      Astro.props.icon?.map((iconItem: { src: string; label: string }) => (
-        <img
-          src={iconItem.src}
-          alt="{iconItem.label}"
-          class="inline-block w-12 mt-2 mr-2 h-auto max-w-full rounded-lg"
-        />
-      ))
-    }
+    {icon?.map(({ component: IconComponent, label }: { component: any; label: string }) => (
+      <div class="icon-wrapper inline-block w-12 mt-2 mr-2 h-auto max-w-full rounded-lg">
+        <IconComponent class="icon" />
+        <span class="sr-only">{label}</span>
+      </div>
+    ))}
   </div>
 </li>
+
+<style>
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+  }
+  
+  .icon {
+    width: 100%;
+    height: auto;
+    max-width: 5vw; 
+    max-height: 5vw; 
+  }
+  
+  @media (max-width: 768px) {
+    .icon {
+      max-width: 10vw;
+      max-height: 10vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .icon {
+      max-width: 15vw; 
+      max-height: 15vw;
+    }
+  }
+  
+  .icon-grid {
+    gap: 1rem; 
+  }
+  
+  @media (max-width: 768px) {
+    .icon-grid {
+      gap: 0.5rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .icon-grid {
+      gap: 0.25rem;
+    }
+  }
+  </style>

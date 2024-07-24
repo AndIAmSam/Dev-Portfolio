@@ -1,5 +1,34 @@
 ---
 import KnowledgeItem from "./KnowledgeItem.astro";
+import ReactIcon from "../components/icons/React.astro";
+import ExpoIcon from "../components/icons/Expo.astro";
+import NodeJSIcon from "../components/icons/NodeJS.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import JavaScriptIcon from "../components/icons/JavaScript.astro";
+import TypescriptIcon from "../components/icons/Typescript.astro";
+import ExpressIcon from "../components/icons/Express.astro";
+import HTMLIcon from "../components/icons/HTML.astro";
+import CSSIcon from "../components/icons/CSS.astro";
+import AstroIcon from "../components/icons/AstroFr.astro";
+import ViteIcon from "../components/icons/Vite.astro";
+import UnityIcon from "../components/icons/Unity.astro";
+import CSIcon from "../components/icons/CS.astro";
+import MySQLIcon from "../components/icons/MySQL.astro";
+import MariaDBIcon from "../components/icons/MariaDB.astro";
+import PythonIcon from "../components/icons/Python.astro";
+import TensorflowIcon from "../components/icons/Tensorflow.astro";
+import AWSIcon from "../components/icons/AWS.astro";
+import FirebaseIcon from "../components/icons/Firebase.astro";
+import AzureIcon from "../components/icons/Azure.astro";
+import NetlifyIcon from "../components/icons/Netlify.astro";
+import MongoDBIcon from "../components/icons/MongoDB.astro";
+import GitIcon from "../components/icons/Git.astro";
+import DockerIcon from "../components/icons/Docker.astro";
+import LinuxIcon from "../components/icons/Linux.astro";
+import FigmaIcon from "../components/icons/Figma.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import WordpressIcon from "../components/icons/Wordpress.astro";
+import ElementorIcon from "../components/icons/Elementor.astro";
 
 const KNOWLEDGE = [
   {
@@ -7,23 +36,22 @@ const KNOWLEDGE = [
     description:
       "Tecnologías con las que estoy más familiarizado y que frecuentemente utilizo en mis proyectos.",
     icon: [
-      { src: "./../../src/brandIcons/React.svg", label: "React Native" },
-      { src: "./../../src/brandIcons/Expo.svg", label: "Expo" },
-      { src: "./../../src/brandIcons/NodeJS.svg", label: "NodeJS" },
-      { src: "./../../src/brandIcons/Tailwind.svg", label: "Tailwind" },
-      { src: "./../../src/brandIcons/JavaScript.svg", label: "JavaScript" },
-      { src: "./../../src/brandIcons/Typescript.svg", label: "Typescript" },
-      { src: "./../../src/brandIcons/Express.svg", label: "Express" },
-      { src: "./../../src/brandIcons/HTML.svg", label: "HTML" },
-      { src: "./../../src/brandIcons/CSS.svg", label: "CSS" },
-      { src: "./../../src/brandIcons/Astro.svg", label: "Astro" },
-      { src: "./../../src/brandIcons/Vite.svg", label: "Vite" },
-      { src: "./../../src/brandIcons/Unity.svg", label: "Unity" },
-      { src: "./../../src/brandIcons/CS.svg", label: "CS" },
-      { src: "./../../src/brandIcons/MySQL.svg", label: "MySQL" },
-      { src: "./../../src/brandIcons/MariaDB.svg", label: "MariaDB" },
-      { src: "./../../src/brandIcons/Python.svg", label: "Python" },
-      { src: "./../../src/brandIcons/Tensorflow.svg", label: "Tensorflow" },
+      { component: ReactIcon, label: "React Native" },
+      { component: ExpoIcon, label: "Expo" },
+      { component: NodeJSIcon, label: "NodeJS" },
+      { component: TailwindIcon, label: "Tailwind" },
+      { component: JavaScriptIcon, label: "JavaScript" },
+      { component: TypescriptIcon, label: "Typescript" },
+      { component: ExpressIcon, label: "Express" },
+      { component: HTMLIcon, label: "HTML" },
+      { component: CSSIcon, label: "CSS" },
+      { component: AstroIcon, label: "Astro" },
+      { component: UnityIcon, label: "Unity" },
+      { component: CSIcon, label: "CS" },
+      { component: MySQLIcon, label: "MySQL" },
+      { component: MariaDBIcon, label: "MariaDB" },
+      { component: PythonIcon, label: "Python" },
+      { component: TensorflowIcon, label: "Tensorflow" },
     ],
   },
   {
@@ -31,11 +59,11 @@ const KNOWLEDGE = [
     description:
       "Tecnologías y herramientas que uso ocasionalmente o en situaciones específicas según las necesidades del proyecto.",
     icon: [
-      { src: "./../../src/brandIcons/AWS.svg", label: "AWS" },
-      { src: "./../../src/brandIcons/Firebase.svg", label: "Firebase" },
-      { src: "./../../src/brandIcons/Azure.svg", label: "Azure" },
-      { src: "./../../src/brandIcons/Netlify.svg", label: "Netlify" },
-      { src: "./../../src/brandIcons/MongoDB.svg", label: "MongoDB" },
+      { component: AWSIcon, label: "AWS" },
+      { component: FirebaseIcon, label: "Firebase" },
+      { component: AzureIcon, label: "Azure" },
+      { component: NetlifyIcon, label: "Netlify" },
+      { component: MongoDBIcon, label: "MongoDB" },
     ],
   },
   {
@@ -43,13 +71,13 @@ const KNOWLEDGE = [
     description:
       "Herramientas esenciales que uso para la gestión de código, el desarrollo de software, y el diseño.",
     icon: [
-      { src: "./../../src/brandIcons/Git.svg", label: "Git" },
-      { src: "./../../src/brandIcons/Docker.svg", label: "Docker" },
-      { src: "./../../src/brandIcons/Linux.svg", label: "Linux" },
-      { src: "./../../src/brandIcons/Figma.svg", label: "Figma" },
-      { src: "./../../src/brandIcons/GitHub.svg", label: "GitHub" },
-      { src: "./../../src/brandIcons/Wordpress.svg", label: "Wordpress" },
-      { src: "./../../src/brandIcons/Elementor.svg", label: "Elementor  " },
+      { component: GitIcon, label: "Git" },
+      { component: DockerIcon, label: "Docker" },
+      { component: LinuxIcon, label: "Linux" },
+      { component: FigmaIcon, label: "Figma" },
+      { component: GitHubIcon, label: "GitHub" },
+      { component: WordpressIcon, label: "Wordpress" },
+      { component: ElementorIcon, label: "Elementor" },
     ],
   },
 ];
