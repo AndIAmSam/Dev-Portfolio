@@ -8,6 +8,9 @@ import Expo from "./icons/Expo.astro";
 import CSS from "./icons/CSS.astro";
 import GitHub from "./icons/GitHub.astro";
 import Vite from "./icons/Vite.astro";
+import Firebase from "./icons/Firebase.astro";
+import Python from "./icons/Python.astro";
+import Tensorflow from "./icons/Tensorflow.astro";
 
 const TAGS = {
   ASTRO: {
@@ -60,12 +63,37 @@ const TAGS = {
     class: "bg-white/20 text-[#646c72]",
     icon: Vite,
   },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-white/20 text-[#ffca28]",
+    icon: Firebase,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-white/20 text-[#306998]",
+    icon: Python,
+  },
+  TENSORFLOW: {
+    name: "Tensorflow",
+    class: "bg-white/20 text-[#ff6f00]",
+    icon: Tensorflow,
+  },
 };
 
 const PROJECTS = [
 {
+    title: "Algoritmos de IA",
+    description:
+      "Redes Neuronales Convolucionales aplicadas en la detección y clasificación de tumores cerebrales. (En proceso)",
+    link: "",
+    github: "https://github.com/AndIAmSam/CNNs",
+    image: "/projects/CNNs.png",
+    tags: [TAGS.PYTHON, TAGS.TENSORFLOW, TAGS.GITHUB],
+  },
+  {
     title: "Tool Web App",
-    description: "Una web con mini-herramientas de distintos tipos. (En proceso)",
+    description:
+      "Una web con mini-herramientas de distintos tipos. (En proceso)",
     link: "",
     github: "https://github.com/AndIAmSam/Dev-Tools",
     image: "/projects/DevTools.png",
@@ -77,7 +105,14 @@ const PROJECTS = [
     link: "#",
     github: "https://github.com/AndIAmSam/To-Do-App",
     image: "/projects/ToDoApp.png",
-    tags: [TAGS.REACTNATIVE, TAGS.JAVASCRIPT, TAGS.REDUX, TAGS.EXPO, TAGS.CSS, TAGS.GITHUB],
+    tags: [
+      TAGS.REACTNATIVE,
+      TAGS.JAVASCRIPT,
+      TAGS.REDUX,
+      TAGS.EXPO,
+      TAGS.CSS,
+      TAGS.GITHUB,
+    ],
   },
 ];
 ---
